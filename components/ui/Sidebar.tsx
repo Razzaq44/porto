@@ -5,12 +5,7 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react';
 import Button from './ButtonMe';
 
-interface Props {
-    // isMenuOpen: boolean;
-    // checkMenu: boolean;
-}
-
-const Sidebar = ({ }: Props) => {
+const Sidebar = () => {
     const [theme, setTheme] = useState(() => {
         const savedTheme = localStorage.getItem("theme");
         const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;

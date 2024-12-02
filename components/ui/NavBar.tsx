@@ -6,11 +6,7 @@ import Button from "./ButtonMe";
 import Image from 'next/image';
 import Link from "next/link";
 
-interface Props {
-    // children: ReactNode,
-}
-
-const NavBar = ({ }: Props) => {
+const NavBar = () => {
     const [theme, setTheme] = useState(() => {
         const savedTheme = localStorage.getItem("theme");
         const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -50,7 +46,7 @@ const NavBar = ({ }: Props) => {
         <>
             <nav className="bg-background md:mt-2 mt-4 lg:mt-1">
                 <div className="flex flex-wrap items-center justify-between mx-auto me-2 px-2 mt-2 md:px-8 md:mt-0">
-                    <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <Image
                             src={logoSrc}
                             alt="Logo"
@@ -60,7 +56,7 @@ const NavBar = ({ }: Props) => {
                             className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
                         />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap">Razzaq</span>
-                    </a>
+                    </Link>
                     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                         <Button class="border border-foreground" onClicked={handleThemeSwitch}>{buttonText}</Button>
                         <button
