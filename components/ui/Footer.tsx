@@ -1,3 +1,4 @@
+"use client";
 import Meteors from "./meteors"
 
 const Footer = () => {

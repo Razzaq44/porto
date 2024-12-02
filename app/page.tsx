@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { NeonRounded } from "@/components/ui/NeonRounded";
 import ShineBorder from "@/components/ui/shine-border";
