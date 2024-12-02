@@ -1,8 +1,7 @@
 "use client"
 
-import local from "next/font/local";
 import { ReactNode, useEffect, useState } from "react"
-import Button from "./ButtonMe";
+import Button from "@/components/ui/ButtonMe";
 import Image from 'next/image';
 import Link from "next/link";
 
